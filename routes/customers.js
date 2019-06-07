@@ -1,6 +1,7 @@
 const errors = require('restify-errors');
 const Customer = require("../models/Customer")
-
+const rjwt = require('restify-jwt-community')
+const config = require('../config')
 
 
 module.exports = server => {
