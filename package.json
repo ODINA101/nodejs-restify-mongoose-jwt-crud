@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mongoose": "^5.5.13",
+    "mongoose-timestamp": "^0.6.0",
+    "restify": "^8.3.3",
+    "restify-errors": "^8.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "request": "^2.88.0",
+    "should": "^13.2.3"
+  }
+}
