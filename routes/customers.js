@@ -8,8 +8,9 @@ module.exports = server => {
     // Get Customers
     server.get('/customers', async (req, res, next) => {
         //res.send({ msg: 'test' })
+        console.log(req.user)
         try {
-            const customers = await Customer.find({});
+            const customers = await Customer.find({}).populate("createdBy");
             res.send(customers)
             next();
         } catch (e) {
@@ -38,7 +39,8 @@ module.exports = server => {
         const customer = new Customer({
             name,
             email,
-            balance
+            balance,
+            createdBy: req.user._id
         })
         try {
             const newCustomer = await customer.save();
